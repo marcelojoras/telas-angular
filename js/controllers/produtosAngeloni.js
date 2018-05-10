@@ -5,9 +5,8 @@ angular.module("produtosAngeloni")
 
 	$scope.adicionarProduto = function(produto){
 		$scope.produtos.push(angular.copy(produto)); //adicionando os dados do produto em um array
-		delete $scope.produto; //resetando os campos
+		delete $scope.cadProduto; //resetando os campos
 		console.log($scope.produtos);
-
 	};
 
 });
