@@ -8,7 +8,7 @@ angular.module("produtosAngeloni")
 		$scope.produtos.push(angular.copy(produto)); //adicionando os dados do produto em um array
 		delete $scope.cadProduto; //resetando os campos
 		console.log($scope.produtos);
-		
+
 		/*produtosAPI.setProdutos($scope.produtos).then(function(promisse){
 
 		});*/

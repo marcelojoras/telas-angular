@@ -17,7 +17,3 @@ function formatReal( int )
 
 
 var int = getMoney(test);
-alert(int);
-
-
-console.log(formatReal(test));
