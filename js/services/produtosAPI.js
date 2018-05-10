@@ -4,7 +4,7 @@ angular.module("produtosAngeloni").factory("produtosAPI", function($http){
 		return $http.post("url", data, {
 			withCredentials: true,
            	headers: {
-             	'Content-Type': undefined,
+             	'Content-Type': 'application/json',
              	'Access-Control-Allow-Origin': '*'
             },
             transformRequest: angular.identity
