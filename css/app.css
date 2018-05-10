@@ -1,3 +1,49 @@
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.ng-scope{
+    background-color: #f1f1f1;
+}
+
 form{
-    margin: 50px 0;
+    margin: 30px 0;
+}
+
+.titulo{
+    padding-top: 50px;
+    font-size:30px;
+    font-weight:bold;
+    color: #0e3777;
+}
+
+.navbar, thead, footer{
+    background-color: #0e3777;
+    color: #fff;
+}
+
+.btn,
+.btn:disabled:hover,
+.btn:disabled:focus{
+    background-color: #f18c00;
+    color: #fff;
+}
+
+button:hover,
+button:focus{
+    background-color: #0e3777;
+}
+
+label{
+    color: #0e3777;
+    font-weight:bold;
+}
+
+tbody td{
+    background-color: #fff;
+}
+
+footer{
+    margin-top:30px;
+    padding:20px;
 }

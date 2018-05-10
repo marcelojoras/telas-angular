@@ -2,6 +2,8 @@
 <html ng-app="produtosAngeloni">
     <head>
         <title>Produtos Angeloni</title>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
         <link rel="stylesheet" type="text/css" href="css/app.css">
         <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
         <script src="lib/angular/angular.min.js"></script>
@@ -12,11 +14,16 @@
     </head>
     <body ng-controller="produtosAngeloniController">
         <header>
-            <nav class="navbar navbar-light bg-light">
-                <span class="navbar-brand mb-0 h1">Pedidos</span>
+            <nav class="navbar navbar-light">
+                <div class="container">
+                    <a class="navbar-brand" href="http://www.angeloni.com.br/super/index" target="_blank" rel="noopener noreferrer">
+                        <img src="img/logo.jpg" class="d-inline-block align-top" alt="Logo">
+                    </a>
+                </div>
             </nav>
         </header>
         <div class="container">
+            <h1 class="titulo">Cadastro de Pedidos</h1>
             <form name="produtoForm">
                 <div class="form-group">
                     <label for="nome">Produto</label>
@@ -36,10 +43,10 @@
                     <label for="preco">Preço</label>
                     <input type="number" ng-required="true" class="form-control" id="preco" placeholder="Preço" ng-model="cadProduto.preco" value="123" required price-format>
                 </div>
-                <button class="btn btn-primary" ng-click="adicionarProduto(cadProduto)" ng-disabled="produtoForm.$invalid">Enviar</button>
+                <button class="btn btn-lg col-md-3" ng-click="adicionarProduto(cadProduto)" ng-disabled="produtoForm.$invalid">Enviar</button>
             </form>
             <table class="table">
-                <thead class="thead-light">
+                <thead>
                     <tr>
                         <th scope="col">Pedido</th>
                         <th scope="col">Nome</th>
@@ -52,7 +59,7 @@
                 <tbody>
                     <tr ng-repeat="x in produtos" ng-if="x.nome">
                         <td>1</td>
-                        <th>{{x.nome}}</th>
+                        <td>{{x.nome}}</td>
                         <td>{{x.data | date:'dd/MM/yyyy'}}</td>
                         <td>{{x.quantidade}}</td>
                         <td>{{x.preco}}</td>
@@ -61,6 +68,11 @@
                 </tbody>
             </table>
         </div>
+        <footer>
+            <div class="container">
+                ©2018 - Compasso Tecnologia - Todos os direitos reservados
+            </div>
+        </footer>
     </body>
 </html>
 
