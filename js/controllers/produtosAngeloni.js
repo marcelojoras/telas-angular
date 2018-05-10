@@ -10,4 +10,5 @@ angular.module("produtosAngeloni")
 		console.log($scope.produtos);
 	};
 
+	
 });
