@@ -20,7 +20,7 @@
             <form name="produtoForm">
                 <div class="form-group">
                     <label for="nome">Produto</label>
-                    <select class="form-control" id="nome" ng-model="cadProduto.nome">
+                    <select class="form-control" id="nome" ng-model="cadProduto.nome" ng-required="true"  required>
                         <option value="">Selecione o produto</option>
                         <option value="Pen-drive">Pen-drive</option>
                         <option value="Notebook">Notebook</option>
@@ -30,13 +30,13 @@
                 </div>
                 <div class="form-group">
                     <label for="quantidade">Quantidade</label>
-                    <input type="text" class="form-control" id="quantidade" placeholder="Quantidade" ng-model="cadProduto.quantidade">
+                    <input type="text" class="form-control" id="quantidade" placeholder="Quantidade" ng-model="cadProduto.quantidade" ng-required="true" required>
                 </div>
                 <div class="form-group">
                     <label for="preco">Preço</label>
-                    <input type="text" class="form-control" id="preco" placeholder="Preço" ng-model="cadProduto.preco" value="123" price-format>
+                    <input type="text" ng-required="true" class="form-control" id="preco" placeholder="Preço" ng-model="cadProduto.preco" value="123" required price-format>
                 </div>
-                <button class="btn btn-primary" ng-click="adicionarProduto(cadProduto)">Enviar</button>
+                <button class="btn btn-primary" ng-click="adicionarProduto(cadProduto)" ng-disabled="produtoForm.$invalid">Enviar</button>
             </form>
             <table class="table">
                 <thead class="thead-light">
