@@ -1,5 +1,5 @@
 angular.module("produtosAngeloni")
-.controller("produtosAngeloniController", function($scope, produtosAPI){
+.controller("produtosAngeloniController", function($scope,  $filter, produtosAPI){
 
 	$scope.produtos = [];
 
