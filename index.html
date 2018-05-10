@@ -8,6 +8,7 @@
         <script src="js/app.js"></script>
 		<script src="js/services/produtosAPI.js"></script>
         <script src="js/controllers/produtosAngeloni.js"></script>
+        <script src="js/directives/priceFormatDirective.js"></script>
     </head>
     <body ng-controller="produtosAngeloniController">
         <header>
@@ -33,7 +34,7 @@
                 </div>
                 <div class="form-group">
                     <label for="preco">Preço</label>
-                    <input type="text" class="form-control" id="preco" placeholder="Preço" ng-model="cadProduto.preco" value="123">
+                    <input type="text" class="form-control" id="preco" placeholder="Preço" ng-model="cadProduto.preco" value="123" price-format>
                 </div>
                 <button class="btn btn-primary" ng-click="adicionarProduto(cadProduto)">Enviar</button>
             </form>
