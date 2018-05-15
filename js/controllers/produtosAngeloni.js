@@ -4,7 +4,7 @@ angular.module("produtosAngeloni")
 	$scope.produtos = [];
 	
 	$scope.adicionarProduto = function(produto){
-		var numeroLinhas = angular.element(document.querySelector("table tbody tr")).length;
+		var numeroLinhas = angular.element(document.querySelectorAll("table tbody tr")).length;
 	
 		produto.pedido = numeroLinhas + 1;
 		produto.data = new Date();
