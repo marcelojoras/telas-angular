@@ -4,10 +4,13 @@ angular.module("produtosAngeloni")
 	$scope.produtos = [];
 
 	$scope.adicionarProduto = function(produto){
+		var linhas = $("table tbody tr");
+		var numeroLinhas = linhas.length;
+
+		produto.pedido = numeroLinhas + 1;
 		produto.data = new Date();
 		$scope.produtos.push(angular.copy(produto)); //adicionando os dados do produto em um array
 		delete $scope.cadProduto; //resetando os campos
-		console.log($scope.produtos);
 
 		/*produtosAPI.setProdutos($scope.produtos).then(function(promisse){
 
